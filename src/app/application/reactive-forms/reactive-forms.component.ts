@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '../user';
+import { User } from '../models/user';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ReactiveService } from './reactive.service';
@@ -19,7 +19,7 @@ export class ReactiveFormsComponent implements OnInit {
       notes:new FormControl()
   }​​​​​​​​);
    
-    user:User;
+    user: User;
     validMessage:string=""
    
   constructor(private service: ReactiveService, private router:Router){​​​​​​​​
@@ -29,7 +29,7 @@ export class ReactiveFormsComponent implements OnInit {
   ngOnInit():void{​​​​​​​​
   }​​​​​​​​
    
-  getform2(){​​​​​​​​
+  get form2(){​​​​​​​​
   return this.userForm.controls;
   }​​​​​​​​
    

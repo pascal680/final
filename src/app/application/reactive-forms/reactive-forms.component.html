@@ -10,8 +10,8 @@
         <input id="name" formControlName="name" class="form-control" />
  
         <div *ngIf="!form2.name.valid && (form2.name.dirty || form2.name.touched)">
-          <div [hidden]="!form2.name.error.required">Le nom est obligatoire</div>
-          <div [hidden]="!form2.name.error.minlength">Le nom doit avoir 8 caracteres</div>
+          <div [hidden]="!form2.name.errors.required">Le nom est obligatoire</div>
+          <div [hidden]="!form2.name.errors.minlength">Le nom doit avoir 8 caracteres</div>
         </div>
       </div>
       

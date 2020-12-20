@@ -1,1 +1,63 @@
-<p>tutoriel works!</p>
+<div class="container">
+    <h2>Importer video Youtube</h2>
+    <form  [formGroup]="videoInfoForm" (ngSubmit)= "onSubmit()" >
+      <div *ngIf="validMessage != ''">
+        <h3 class="has-info"> {{validMessage}}</h3>
+      </div>
+  
+      <div class="form-group">
+        <label for="titreVideo">Titre de la video</label>
+        <input id="titreVideo" formControlName="titreVideo" class="form-control" />
+ 
+        <div *ngIf="!form2.titreVideo.valid && (form2.titreVideo.dirty || form2.titreVideo.touched)">
+          <div [hidden]="!form2.titreVideo.errors.required">Le nom est obligatoire</div>
+        </div>
+      </div>
+      
+ 
+  
+      <div class="form-group">
+        <label for="videoUrl">Video Link (URL)</label>
+        <input id="videoUrl" formControlName="videoUrl" class="form-control" />
+        
+        <div *ngIf="!form2.videoUrl.valid && (form2.videoUrl.dirty || form2.videoUrl.touched)">
+            <div [hidden]="!form2.videoUrl.errors.required">Le lien au video est obligatoire</div>
+          </div>
+    </div>
+
+  
+      <div class="form-check form-group">
+        <input class="form-check-input" type="checkbox"
+                id="ageRestricted" formControlName="ageRestricted">
+        <label class="form-check-label" for="ageRestricted">
+          Age restricted
+        </label>
+      </div>
+  
+  
+      <p>Video Type</p>
+      <div class="form-group">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" formControlName="typeVideo" 
+                 id="music" value="music" checked >
+          <label class="form-check-label" for="music">
+            Music
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" formControlName="typeVideo" 
+                 id="video" value="video">
+          <label class="form-check-label" for="video">
+            Video
+          </label>
+        </div>
+        <div *ngIf="!form2.typeVideo.valid && (form2.typeVideo.dirty || form2.typeVideo.touched)">
+            <div [hidden]="!form2.typeVideo.errors.required">Le type du video est obligatoire</div>
+          </div>
+      </div>
+  
+      <button class="btn btn-primary" >Send</button>
+    </form>
+  </div>
+  
+  <hr>

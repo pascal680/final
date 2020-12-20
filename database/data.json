@@ -1,6 +1,49 @@
 {
-    "api":[
-        {"id": 100,
-        "name":"pascal"}
-    ]
+  "users": [
+    {
+      "name": "testing update",
+      "password": "1431414",
+      "emailOffers": true,
+      "interfaceStyle": "light",
+      "subscriptionType": "Lifetime",
+      "notes": "4141414",
+      "id": 3
+    },
+    {
+      "name": "test12345",
+      "password": "test",
+      "emailOffers": true,
+      "interfaceStyle": "dark",
+      "subscriptionType": "Monthly",
+      "notes": "14141247174",
+      "id": 4
+    },
+    {
+      "name": "Daniel Bourgoin",
+      "password": "test",
+      "emailOffers": true,
+      "interfaceStyle": "dark",
+      "subscriptionType": "Lifetime",
+      "notes": "Pornhub premium for life",
+      "id": 5
+    },
+    {
+      "name": "Pascal Bourgoin",
+      "password": "12345",
+      "emailOffers": true,
+      "interfaceStyle": "dark",
+      "subscriptionType": "Annual",
+      "notes": "test showing",
+      "id": 6
+    },
+    {
+      "name": "Toto1234",
+      "password": "test",
+      "emailOffers": true,
+      "interfaceStyle": "dark",
+      "subscriptionType": "Annual",
+      "notes": "testing",
+      "id": 7
+    }
+  ]
 }

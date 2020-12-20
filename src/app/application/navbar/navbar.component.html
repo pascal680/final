@@ -18,25 +18,22 @@
                         <a routerLink="home" class="nav-link font-weight-bold text-capitalize text-warning px-3">Home</a>
                     </li>
                     <li class="nav-item dropdown" data-toggle="dropdown">
-                        <a href="" class="nav-link font-weight-bold text-capitalize text-warning dropdown-toggle px-3" data-toggle="dropdown" id="dropdownMenu">Tutoriel</a>
+                        <a class="nav-link font-weight-bold text-capitalize text-warning dropdown-toggle px-3" data-toggle="dropdown" id="dropdownMenu" aria-haspopup="true" aria-expanded="false">Tutoriel</a>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenu">
-                            <a [routerLink]="['/tutoriel', 1]" class="dropdown-item">Mini tutoriel Angular 10</a>
-                            <a [routerLink]="['/tutoriel', 2]" class="dropdown-item">Mini tutoriel Crud</a>
-                            <a [routerLink]="['/tutoriel', 3]" class="dropdown-item">Mini tutoriel des relations</a>
-                            <a [routerLink]="['/tutoriel', 4]" class="dropdown-item">Mini tutoriel</a>
+                            <a [routerLink]="['/tutorielCrud']" class="dropdown-item">Mini tutoriel Crud</a>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a [routerLink]="['formulaire']" class="nav-link font-weight-bold text-capitalize text-warning px-3">Formulaire</a>
+                        <a [routerLink]="['formulaire/']" class="nav-link font-weight-bold text-capitalize text-warning px-3">Formulaire</a>
                     </li>
                     <li class="nav-item">
-                        <a [routerLink]="['crud']" class="nav-link font-weight-bold text-capitalize text-warning px-3">Crud</a>
+                        <a [routerLink]="['crud/']" class="nav-link font-weight-bold text-capitalize text-warning px-3">Crud</a>
                     </li>
                     <li class="nav-item">
-                        <a [routerLink]="['fun']" class="nav-link font-weight-bold text-capitalize text-warning px-3">Fun</a>
+                        <a [routerLink]="['fun/']" class="nav-link font-weight-bold text-capitalize text-warning px-3">Fun</a>
                     </li>
                     <li class="nav-item">
-                        <a [routerLink]="['contact']" class="nav-link font-weight-bold text-capitalize text-warning px-3">Contact</a>
+                        <a [routerLink]="['contact/']" class="nav-link font-weight-bold text-capitalize text-warning px-3">Contact</a>
                     </li>
                 </ul>
         </div>

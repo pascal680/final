@@ -1,1 +1,50 @@
-<p>fun works!</p>
+<div class="container-fluid row">
+    <!-- Code pour cache l'espace d'affichage lorsque rien n'est afficher mais il ne fonctionne pas 1/2
+    <div *ngIf="!videoInfo" class="col-lg-12 col-sm-12">
+    <div *ngIf="videoInfo" class="col-lg-6 col-sm-12"> -->
+
+    <div class="col-lg-6 col-sm-12">
+    <h1 class="text-center">Exemple Crud Video</h1>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th *ngFor="let entete of headElements" scope="col">{{entete}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let video of listVideoInfo, let i of index">
+                <td>{{video.id}}</td>
+                <td>{{video.titreVideo}}</td>
+                <td>{{video.ageRestricted}}</td>
+                <td>{{video.typeVideo}}</td>
+                <td>
+                    <button type="button" (click)="rechercher(video.id)" class="btn btn-info mx-1">Afficher</button>
+                    <a [routerLink]="[ '/updateForm/', video.id ]" class="btn btn-primary mx-1">Update</a>
+                    <button type="button" (click)="delete(video.id, i)" class="btn btn-danger mx-1">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+
+    <!-- Code pour cache l'espace d'affichage lorsque rien n'est afficher mais il ne fonctionne pas 2/2
+    <div *ngIf="videoInfo" class="col-lg-6 col-sm-12"> -->
+    <div class="col-lg-6 col-sm-12">
+        <h1 class="text-center mb-2">Affichage Video</h1>
+        <div *ngIf="videoInfo" class="container" >
+            <h3>Titre Video : {{videoInfo.titreVideo}}</h3>
+            <h3>Lien Video (URL) : {{videoInfo.videoUrl}}</h3>
+            <h3>Contenu Mature : {{videoInfo.ageRestricted}}</h3>
+            <h3>Type Video : {{videoInfo.typeVideo}}</h3>
+
+            <div class="container">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="{{videoInfo.videoUrl}}" allowfullscreen></iframe>
+              </div>
+            </div>
+        </div>
+
+    </div>
+    
+
+</div>

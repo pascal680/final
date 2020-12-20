@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '../user';
+import { User } from '../models/user';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { FormulairesService } from './formulaires.service';
@@ -29,7 +29,7 @@ export class FormulairesComponent implements OnInit {
   ngOnInit():void{​​​​​​​​
   }​​​​​​​​
    
-  getform2(){​​​​​​​​
+  get form2(){​​​​​​​​
   return this.userForm.controls;
   }​​​​​​​​
    

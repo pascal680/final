@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '../../user';
+import { User } from '../../models/user';
 import { UserService } from '../services/user.service'
 
 @Component({
@@ -10,7 +10,7 @@ import { UserService } from '../services/user.service'
 export class ReadComponent implements OnInit {
 
   listUsers: Array<User>;
-  public headElements = ['ID', 'Name', 'Pwd', 'userInterface', 'Operation'];
+  public headElements = ['ID', 'Name', 'Pwd', 'UserInterface', 'Operation'];
 
   constructor(private service: UserService) { }
 
@@ -27,7 +27,7 @@ export class ReadComponent implements OnInit {
 
   public delete(id: number){
     if(window.confirm("Are you sure?")){
-      this.service.deleteById(id).subscribe(res =>{
+      this.service.deleteById(id).subscribe(() =>{
         this.listUsers = this.listUsers.filter(record => record.id !== id);
       },(err)=>{
         console.log(err);

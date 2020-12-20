@@ -6,8 +6,9 @@ import {HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class EmployeeService{
+export class EmployeeService extends GenericService<number,number>{
 
   constructor(http: HttpClient) {
+    super(http, "")
    }
 }

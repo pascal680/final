@@ -1,0 +1,25 @@
+{
+  "videoInfos": [
+    {
+      "titreVideo": "titre",
+      "videoUrl": "link video",
+      "ageRestricted": true,
+      "typeVideo": "music",
+      "id": 1
+    },
+    {
+      "titreVideo": "Covid 19  update",
+      "videoUrl": "https://www.youtube.com/watch?v=ny3hhkA1Zmk",
+      "ageRestricted": "",
+      "typeVideo": "video",
+      "id": 2
+    },
+    {
+      "titreVideo": "test video go pro",
+      "videoUrl": "https://www.youtube.com/embed/PjGkVCAo8Fw",
+      "ageRestricted": true,
+      "typeVideo": "video",
+      "id": 3
+    }
+  ]
+}

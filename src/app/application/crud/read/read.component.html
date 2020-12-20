@@ -1,6 +1,6 @@
 <div class="container-fluid">
     <h1>Exemple Crud</h1>
-    <table class="table">\
+    <table class="table">
         <thead class="thead-dark">
             <tr>
                 <th *ngFor="let entete of headElements" scope="col">{{entete}}</th>
@@ -13,7 +13,7 @@
                 <td>{{item.password}}</td>
                 <td>{{item.interfaceStyle}}</td>
                 <td>
-                    <a href="" class="btn btn-info">Create</a>
+                    <a href="" class="btn btn-info">Afficher</a>
                     <a [routerLink]="[ '/updateForm/', item.id ]" class="btn btn-primary">Update</a>
                     <button type="button" (click)="delete(item.id)" class="btn btn-danger">Delete</button>
                     <button type="button" (click)="delete2(item.id, i)" class="btn btn-danger">Delete2</button>

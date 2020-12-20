@@ -15,9 +15,9 @@ import { TutorielComponent } from './application/tutoriel/tutoriel.component';
 import { ReadComponent } from './application/crud/read/read.component';
 import { UpdateComponent } from './application/crud/update/update.component';
 import { DeleteComponent } from './application/crud/delete/delete.component';
-import { TutorielsComponent } from './application/tutoriels/tutoriels.component';
 import { FooterComponent } from './application/footer/footer.component';
 import { ReactiveFormsComponent } from './application/reactive-forms/reactive-forms.component';
+import { UpdateVideoComponent } from './application/fun/update-video/update-video.component';
 
 @NgModule({
   declarations: [
@@ -32,9 +32,9 @@ import { ReactiveFormsComponent } from './application/reactive-forms/reactive-fo
     ReadComponent,
     UpdateComponent,
     DeleteComponent,
-    TutorielsComponent,
     FooterComponent,
-    ReactiveFormsComponent
+    ReactiveFormsComponent,
+    UpdateVideoComponent
   ],
   imports: [
     BrowserModule,

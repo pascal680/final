@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { User } from '../../user';
+import { User } from '../../models/user';
 import { GenericService } from './generic.service'
 
 @Injectable({
@@ -9,6 +9,6 @@ import { GenericService } from './generic.service'
 export class UserService extends GenericService<User, number>{
 
   constructor(http: HttpClient) {
-    super(http, )
+    super(http, "http://localhost:3001/users")
    }
 }
