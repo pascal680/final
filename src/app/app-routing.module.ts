@@ -8,12 +8,14 @@ import { FunComponent } from './application/fun/fun.component';
 import { ContactComponent } from './application/contact/contact.component';
 import { ReactiveFormsComponent } from './application/reactive-forms/reactive-forms.component';
 import { TutorielComponent } from './application/tutoriel/tutoriel.component';
+import { UpdateVideoComponent } from './application/fun/update-video/update-video.component';
 
 
 const routes: Routes = [
   {path:'tutorielCrud', component:TutorielComponent},
   
   {path:'updateForm/:id', component:UpdateComponent},
+  {path:'updateVideoInfoForm/:id', component:UpdateVideoComponent},
   
   {path:'home', component:HomeComponent},
   {path:'crud', component:ReadComponent},
@@ -22,7 +24,7 @@ const routes: Routes = [
   {path:'formulaire', component:ReactiveFormsComponent},
 
   {path:'**', component:Error404Component},
-  {path:'', redirectTo:'/home', pathMatch:'full'}
+  {path:' ', redirectTo:'/home', pathMatch:'full'}
 ];
 
 @NgModule({

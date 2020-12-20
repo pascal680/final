@@ -1,25 +1,18 @@
 {
   "videoInfos": [
     {
-      "titreVideo": "titre",
-      "videoUrl": "link video",
-      "ageRestricted": true,
-      "typeVideo": "music",
+      "titreVideo": "Embed tutoriel bootstrap",
+      "videoUrl": "https://www.youtube.com/embed/HHnQRL6zlGc",
+      "ageRestricted": "",
+      "typeVideo": "video",
       "id": 1
     },
     {
-      "titreVideo": "Covid 19  update",
-      "videoUrl": "https://www.youtube.com/watch?v=ny3hhkA1Zmk",
+      "titreVideo": "Lo-fi",
+      "videoUrl": "https://www.youtube.com/embed/f02mOEt11OQ",
       "ageRestricted": "",
-      "typeVideo": "video",
+      "typeVideo": "music",
       "id": 2
-    },
-    {
-      "titreVideo": "test video go pro",
-      "videoUrl": "https://www.youtube.com/embed/PjGkVCAo8Fw",
-      "ageRestricted": true,
-      "typeVideo": "video",
-      "id": 3
     }
   ]
 }

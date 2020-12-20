@@ -4,7 +4,7 @@
     <div *ngIf="videoInfo" class="col-lg-6 col-sm-12"> -->
 
     <div class="col-lg-6 col-sm-12">
-    <h1 class="text-center">Exemple Crud Video</h1>
+    <h1 class="text-center text-info mb-2">Exemple Crud Video</h1>
     <table class="table">
         <thead class="thead-dark">
             <tr>
@@ -19,7 +19,7 @@
                 <td>{{video.typeVideo}}</td>
                 <td>
                     <button type="button" (click)="rechercher(video.id)" class="btn btn-info mx-1">Afficher</button>
-                    <a [routerLink]="[ '/updateForm/', video.id ]" class="btn btn-primary mx-1">Update</a>
+                    <a [routerLink]="[ '/updateVideoInfoForm/', video.id ]" class="btn btn-primary mx-1">Update</a>
                     <button type="button" (click)="delete(video.id, i)" class="btn btn-danger mx-1">Delete</button>
                 </td>
             </tr>
@@ -30,18 +30,18 @@
     <!-- Code pour cache l'espace d'affichage lorsque rien n'est afficher mais il ne fonctionne pas 2/2
     <div *ngIf="videoInfo" class="col-lg-6 col-sm-12"> -->
     <div class="col-lg-6 col-sm-12">
-        <h1 class="text-center mb-2">Affichage Video</h1>
+        <h1 class="text-center mb-2 text-info">Affichage Video</h1>
         <div *ngIf="videoInfo" class="container" >
             <h3>Titre Video : {{videoInfo.titreVideo}}</h3>
-            <h3>Lien Video (URL) : {{videoInfo.videoUrl}}</h3>
+            <h3>Identifiant Video Youtube : {{videoInfo.videoUrl}}</h3>
             <h3>Contenu Mature : {{videoInfo.ageRestricted}}</h3>
             <h3>Type Video : {{videoInfo.typeVideo}}</h3>
 
-            <div class="container">
             <div class="embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item" src="{{videoInfo.videoUrl}}" allowfullscreen></iframe>
+                <iframe class="embed-responsive-item" src={{videoInfo.videoUrl}} ></iframe>
               </div>
-            </div>
+                
+                
         </div>
 
     </div>

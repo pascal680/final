@@ -20,28 +20,28 @@ export class ReadComponent implements OnInit {
   getAllUsers(): void {
     this.service.getAll().subscribe(res => {
       this.listUsers = res;
-    }, (err)=> {
+    }, (err) => {
       console.log(err);
     });
   }
 
-  public delete(id: number){
-    if(window.confirm("Are you sure?")){
-      this.service.deleteById(id).subscribe(() =>{
+  public delete(id: number) {
+    if (window.confirm("Are you sure?")) {
+      this.service.deleteById(id).subscribe(() => {
         this.listUsers = this.listUsers.filter(record => record.id !== id);
-      },(err)=>{
+      }, (err) => {
         console.log(err);
       })
     }
   }
 
-  public delete2(id: number, i:any){
-    if(window.confirm("Are you sure?")){
-      this.service.deleteById(id).subscribe(() =>{
-        this.listUsers.splice(i,1);
-      },(err)=>{
+  public delete2(id: number, i: any) {
+    if (window.confirm("Are you sure?")) {
+      this.service.deleteById(id).subscribe(() => {
+        this.listUsers.splice(i, 1);
+      }, (err) => {
         console.log(err);
       });
-  }
+    }
   }
 }
